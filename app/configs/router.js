@@ -30,7 +30,7 @@ angular.module('app').config(function ($stateProvider, $urlRouterProvider) {
   $stateProvider.state('reader.create', {
     url: '/create',
     templateUrl: 'controllers/reader/create.html',
-    controller: 'ReaderCreateController as vm'
+    controller: 'ReaderCreateCtrl as vm'
   });
 
 });

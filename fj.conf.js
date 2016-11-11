@@ -5,9 +5,9 @@ module.exports = function (config) {
   config.name = 'app';
   config.rules = [
     {
-      url: '/api', // 要代理的url，可以是正则表达式，也可以是字符串，如果是字符串(假设为'/api')则将被处理成/^\/api\/(.*)$/的形式
-      rewrite: '$1',  // 可选，默认把原来的url完全传过来，即：不重写
-      proxy: 'http://localhost:5050/', // 反向代理设置
+      url: /^\/api\/(.*)$/, // 要代理的url，正则表达式
+      rewrite: '/api/$1',   // 这里保留/api，默认删掉/api
+      proxy: 'http://localhost:5005/', // 反向代理设置
       cookie: {
         path: '/api',
         domain: 'localhost'

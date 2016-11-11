@@ -1,0 +1,40 @@
+{
+  "name": "book-forum-fj",
+  "version": "0.1.1",
+  "description": "nodejs server of book-forum-fj",
+  "main": "server/server.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "serve": "node server/server.js 5005"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/phoenixqm/book-forum-fj.git"
+  },
+  "keywords": [
+    "angular",
+    "nodejs",
+    "mongodb",
+    "express"
+  ],
+  "author": "Qi Ming",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/phoenixqm/book-forum-fj/issues"
+  },
+  "homepage": "https://github.com/phoenixqm/book-forum-fj#readme",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "compression": "^1.6.2",
+    "connect": "^3.5.0",
+    "connect-multiparty": "^2.0.0",
+    "cookie-session": "^2.0.0-alpha.2",
+    "express": "^4.14.0",
+    "multiparty": "^4.1.2",
+    "serve-static": "^1.11.1",
+    "socket.io": "^1.5.1"
+  }
+}

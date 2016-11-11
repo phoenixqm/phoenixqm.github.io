@@ -20,4 +20,17 @@ angular.module('app').config(function ($stateProvider, $urlRouterProvider) {
   });
 
   $urlRouterProvider.otherwise('/notFound');
+
+  $stateProvider.state('reader', {
+    url: '/reader',
+    template: '<div ui-view></div>',
+    abstract: true
+  });
+
+  $stateProvider.state('reader.create', {
+    url: '/create',
+    templateUrl: 'controllers/reader/create.html',
+    controller: 'ReaderCreateController as vm'
+  });
+
 });

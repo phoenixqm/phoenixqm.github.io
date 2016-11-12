@@ -33,4 +33,32 @@ angular.module('app').config(function ($stateProvider, $urlRouterProvider) {
     controller: 'ReaderCreateCtrl as vm'
   });
 
+  $stateProvider.state('reader.list', {
+    url: '/list',
+    templateUrl: 'controllers/reader/list.html',
+    controller: 'ReaderListCtrl as vm'
+  });
+
+  $stateProvider.state('thread', {
+    url: '/thread',
+    template: '<div ui-view></div>',
+    abstract: true
+  });
+  $stateProvider.state('thread.list', {
+    url: '/list',
+    templateUrl: 'controllers/thread/list.html',
+    controller: 'ThreadListCtrl as vm'
+  });
+  $stateProvider.state('thread.tree', {
+    url: '/tree',
+    templateUrl: 'controllers/thread/tree.html',
+    controller: 'ThreadTreeCtrl as vm'
+  });
+  $stateProvider.state('thread.show', {
+    url: '/:id/show?title&poster',
+    templateUrl: 'controllers/thread/show.html',
+    controller: 'ThreadShowCtrl as vm'
+  });
+
+
 });

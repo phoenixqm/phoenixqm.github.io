@@ -88,7 +88,8 @@
     function getReader(req, res){
         console.log("getReaders");
         // console.dir(req);
-        res.send("getReaders");
+        // res.send("getReaders");
+        res.send( '[{"username":"phoenixqm"}, {"username":"github"}]');
     }
     function postReader(req, res){
         console.log("postReaders");

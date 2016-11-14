@@ -5,6 +5,7 @@ angular.module('blogApp').controller('BlogPrimaryController', function LayoutFoo
 angular.module('blogApp').directive('blogPrimary', function LayoutFooter() {
   return {
     restrict: 'EA',
+    replace: true,
     scope: {},
     templateUrl: 'components/layout/primary.html',
     controller: 'BlogPrimaryController'

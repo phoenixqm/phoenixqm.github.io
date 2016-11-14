@@ -1,16 +1,44 @@
 'use strict';
 
-angular.module('app').controller('BlogAppLayoutCtrl', function AppLayoutCtrl($scope, utils) {
+angular.module('blogApp').controller('BlogAppLayoutController', function AppLayoutCtrl($scope) {
   var vm = $scope.vm = {};
   $scope.$on('$stateChangeSuccess', function(event, state) {
-    vm.controllerCss = utils.getControllerCss(state.controller);
+    // vm.controllerCss = utils.getControllerCss(state.controller);
   });
 });
-angular.module('app').directive('BlogAppLayout', function appLayout() {
+angular.module('blogApp').directive('blogAppLayout', function appLayout() {
   return {
     restrict: 'EA',
     scope: {},
-    templateUrl: 'components/layout/_layout.html',
-    controller: 'AppLayoutCtrl'
+    templateUrl: 'components/layout/bloglayout.html',
+    controller: 'BlogAppLayoutController'
   };
 });
+
+
+angular.module('blogApp').controller('BlogFooterController', function LayoutFooterCtrl($scope) {
+  var vm = $scope.vm = {};
+
+});
+angular.module('blogApp').directive('blogFooter', function LayoutFooter() {
+  return {
+    restrict: 'EA',
+    scope: {},
+    templateUrl: 'components/layout/blogfooter.html',
+    controller: 'BlogFooterController'
+  };
+});
+
+angular.module('blogApp').controller('BlogHeaderController', function LayoutFooterCtrl($scope) {
+  var vm = $scope.vm = {};
+
+});
+angular.module('blogApp').directive('blogHeader', function LayoutFooter() {
+  return {
+    restrict: 'EA',
+    scope: {},
+    templateUrl: 'components/layout/blogheader.html',
+    controller: 'BlogHeaderController'
+  };
+});
+

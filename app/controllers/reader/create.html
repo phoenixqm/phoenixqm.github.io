@@ -2,6 +2,10 @@
   <div>
     <label for="_email">邮箱</label>
     <input id="_email" bf-field-error type="email" ng-required="true" ng-model="vm.form.email"/>
+    <ul ng-if="form.email.$dirty && form.email.$invalid">
+      <li ng-if="form.email.$error.email">无效的邮箱格式 </li>
+      <li ng-if="form.email.$error.required">此项为必填项目 </li>
+    </ul>
   </div>
   <div>
     <label for="_nickname">昵称</label>

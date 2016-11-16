@@ -1,5 +1,5 @@
 
-本文`AngularJS`指的是`AngularJS 1.x`。Angular2的git repo为`angular.io`.
+本文`AngularJS`指的是`AngularJS 1.x`。Angular2是不是对AngularJS的继承，是重新设计的框架.
 
 AngularJS项目编译需要注意：
  - 只能用`node v4`，可以考虑使用`nvm`管理node版本。
@@ -8,8 +8,8 @@ AngularJS项目编译需要注意：
 AngularJS项目的结构组织很清楚，不需要多说。
 
 学习AngularJS除了官方文档，还有的主要参考书：
- - AngularJS权威指南，即ng-book，入门书
- - AngularJS深度剖析与最佳实践，深入和实践
+ - AngularJS权威指南，即ng-book，Ari Lerner著，入门书
+ - AngularJS深度剖析与最佳实践，雪狼 破狼 彭洪伟著，很多干货
 
 
 ### 学习AngularJS源码的非常好的博文
@@ -48,11 +48,22 @@ AngularJS项目的结构组织很清楚，不需要多说。
 
 ### 理解AnguarJS中的Provider
 
-TODO
+结合前面的博文链接已经清楚地说明了Provider的原理。实际上这种依赖注入是面向对象编程中的一种通用的设计原则。
+在各种高级语言中都有这种模式的身影。参考中文维基百科的说法：
+>控制反转（Inversion of Control，缩写为IoC），是面向对象编程中的一种设计原则，可以用来减低计算机代码之间的耦合度。其中最常见的方式叫做依赖注入（Dependency Injection，简称DI），还有一种方式叫“依赖查找”（Dependency Lookup）。通过控制反转，对象在被创建的时候，由一个调控系统内所有对象的外界实体，将其所依赖的对象的引用传递给它。也可以说，依赖被注入到对象中。
 
 
-### 前人的经验总结
- - Angularjs开发一些经验总结 by 破狼(http://jingpin.jikexueyuan.com/article/3884.html)
+### AngualrJS的FrontJet工具
 
-### 参考博文：
-  - [理解AnguarJS中的模板编译](http://log4think.com/understanding_angularjs_template_compiling/)
+`FrontJet`就是《AngularJS深度剖析与最佳实践》一书的基础。我从零经验顺着这本书看了一遍FrontJet生成代码和实例。
+之后基于FrontJet生产的scaffold非常顺利地重构了本博客，对于github博客这种简单应用，重构成本几乎为零。
+可见AngularJS的易用性是毫不含糊的。
+
+
+
+### AngualrJS经验总结
+ - [Angularjs开发一些经验总结 by 破狼](http://jingpin.jikexueyuan.com/article/3884.html)
+
+### 其他参考
+
+ - [理解AnguarJS中的模板编译](http://log4think.com/understanding_angularjs_template_compiling/)

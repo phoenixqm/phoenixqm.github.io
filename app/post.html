@@ -27,7 +27,33 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <link rel="stylesheet" href="assets/css/proj-layout.css">
 
     <script src="https://cdn.rawgit.com/showdownjs/showdown/1.4.4/dist/showdown.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+
+<!-- <script src="../bower_components/modernizr/modernizr.js"></script>
+<script src="../bower_components/es5-shim/es5-shim.js"></script>
+<script src="../bower_components/es6-shim/es6-shim.js"></script>
+<script src="../bower_components/jquery/dist/jquery.js"></script>
+<script src="../bower_components/angular/angular.js"></script>
+<script src="../bower_components/angular-animate/angular-animate.js"></script>
+<script src="../bower_components/angular-cookies/angular-cookies.js"></script>
+<script src="../bower_components/angular-touch/angular-touch.js"></script>
+<script src="../bower_components/angular-sanitize/angular-sanitize.js"></script>
+<script src="../bower_components/angular-resource/angular-resource.js"></script>
+<script src="../bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+<script src="../bower_components/bootstrap-sass-official/assets/javascripts/bootstrap.js"></script>
+<script src="../bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+ -->
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.28/angular.min.js"></script>
+<!-- <script src="../bower_components/angular-animate/angular-animate.js"></script> -->
+<!-- <script src="../bower_components/angular-cookies/angular-cookies.js"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-touch/1.5.8/angular-touch.min.js"></script>
+<!-- <script src="../bower_components/angular-sanitize/angular-sanitize.js"></script> -->
+<!-- <script src="../bower_components/angular-resource/angular-resource.js"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.13/angular-ui-router.js"></script>
+
+
     <script src="assets/js/util.js"></script>
 
     <!--<script src="/assets/js/jquery.js"></script>-->
@@ -93,49 +119,58 @@ $(document).ready(function() {
     var obj = {};
     var key = getURLParameter("key");
 
-
+    console.log(key)
 
     $.ajax({
         type: "GET",
-        url: "posts/post_list.txt",
+        url: "posts/post_list.json",
         dataType: "text",
-        success: function(data) {
-            processData(data);
-            fillPost();
+        success: function(jsonstr) {
 
+
+            var data = angular.fromJson(jsonstr);
+            console.log(data);
+            for (var j = 0; j < data.posts.length; j++) {
+                if (key == data.posts[j].key){
+                    obj = data.posts[j];
+                }
+            }
+            console.log(obj);
+
+            fillPost();
             initDoushuo();
         }
     });
 
-    // Let's process the data from the data file
-    function processData(data) {
-        var lines = data.split(/\r\n|\n/);
+    // // Let's process the data from the data file
+    // function processData(data) {
+    //     var lines = data.split(/\r\n|\n/);
 
-        var headings = lines[0].split('|');
-        for (var i = 0; i < headings.length; i++) {
-            headings[i] = trim(headings[i]);
-        }
+    //     var headings = lines[0].split('|');
+    //     for (var i = 0; i < headings.length; i++) {
+    //         headings[i] = trim(headings[i]);
+    //     }
 
-        for (var j = 1; j < lines.length; j++) {
+    //     for (var j = 1; j < lines.length; j++) {
 
-            var values = lines[j].split('|');
-            var datakey = trim(values[0]);
-            if (datakey.indexOf("*") == 0) {
-                datakey = datakey.substring(1);
-            }
-            if (datakey == key) {
-                for (var k = 0; k < values.length; k++) {
-                    obj[headings[k]] = trim(values[k]);
-                }
-                obj.key = datakey;
-                break;
-            }
+    //         var values = lines[j].split('|');
+    //         var datakey = trim(values[0]);
+    //         if (datakey.indexOf("*") == 0) {
+    //             datakey = datakey.substring(1);
+    //         }
+    //         if (datakey == key) {
+    //             for (var k = 0; k < values.length; k++) {
+    //                 obj[headings[k]] = trim(values[k]);
+    //             }
+    //             obj.key = datakey;
+    //             break;
+    //         }
 
-        }
+    //     }
 
-        console.log(obj);
+    //     console.log(obj);
 
-    }
+    // }
 
 
     function fillPost(){

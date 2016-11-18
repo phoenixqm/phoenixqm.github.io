@@ -62,7 +62,17 @@ AngularJS项目的结构组织很清楚，不需要多说。
 
 
 ### AngualrJS经验总结
- - [Angularjs开发一些经验总结 by 破狼](http://jingpin.jikexueyuan.com/article/3884.html)
+ - [angular中的MVVM模式 by 破狼](http://www.cnblogs.com/whitewolf/p/4581254.html)
+ - [细说Angular ng-class by 破狼](http://www.cnblogs.com/whitewolf/archive/2013/05/22/3092184.html)
+ - [Angularjs开发一些经验总结 by 破狼](http://www.cnblogs.com/whitewolf/archive/2013/03/24/2979344.html)
+ - [Angularjs开发一些经验总结 by 破狼](http://www.cnblogs.com/whitewolf/archive/2013/03/24/2979344.html)
+ - [Angularjs开发一些经验总结 by 破狼](http://www.cnblogs.com/whitewolf/archive/2013/03/24/2979344.html)
+ - 重要的博文看三遍
+ - [破狼 随笔分类 -AngularJs](http://www.cnblogs.com/whitewolf/)
+
+### AnuglarJS实例
+
+ - [自定义Angular插件 - 网站用户引导](http://www.cnblogs.com/whitewolf/p/angular-trainning.html)
 
 ### 其他参考
 

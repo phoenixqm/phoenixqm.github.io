@@ -142,6 +142,8 @@ $(document).ready(function() {
         }
     });
 
+    renderMarkdown();
+
     // // Let's process the data from the data file
     // function processData(data) {
     //     var lines = data.split(/\r\n|\n/);
@@ -190,16 +192,15 @@ $(document).ready(function() {
         ds.find("div.data-thread").attr("data-title", obj.title);
         ds.find("div.data-thread").attr("data-url", "http://phoenixqm.github.io/app/post.html?key=" + obj.key);
 
-        renderMarkdown();
     }
 
     function renderMarkdown(){
         var converter = new showdown.Converter();
 
         var article = document.getElementById("markdowngen");
-        console.log(obj.key);
+        console.log(key);
         $.ajax({
-          url: "posts/"+obj.key+".md",
+          url: "posts/"+key+".md",
           beforeSend: function( xhr ) {
             // xhr.overrideMimeType( "text/plain; charset=x-user-defined" );
           }

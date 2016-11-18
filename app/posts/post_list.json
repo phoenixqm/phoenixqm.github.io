@@ -1,6 +1,14 @@
 {
     "posts":[
         {
+            "key":"es6-what-new",
+            "title":"ECMAScrit 6 关键概念",
+            "time":"Nov 16, 2016",
+            "category":"FE",
+            "summary":"具体介绍 ECMAScrit 6 中的关键新概念",
+            "info":""
+        },
+        {
             "key":"aws-ec2-ways",
             "title":"使用AWS EC2 翻!墙的两种方式",
             "time":"Nov 16, 2016",

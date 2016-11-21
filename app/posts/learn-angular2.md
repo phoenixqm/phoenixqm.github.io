@@ -7,6 +7,13 @@
 ### Angular2资源链接
  - [Angular2.0官方网站](https://angular.io/)
 
+一定要仔细阅读Quickstart， Guide，和Tutorial，一些细节容易漏过，比如：
+>You can register providers in modules or in components.
+>In general, add providers to the root module so that the same instance of a service is available everywhere.
+>Registering at a component level means you get a new instance of the service with each new instance of that component.
+
+
+
 ### 构建angular2源代码
 
 根据官网的配置方法:angular.io/README.md ->  Development Setup，Mac平台下可以顺利构建，同时构建angular.io。

@@ -24,3 +24,8 @@
     color: #DA4453;
 
 }
+
+.social-menu > li > a > i.fa {
+    text-align: center;
+    line-height: 200%;
+}

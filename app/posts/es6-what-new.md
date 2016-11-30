@@ -51,3 +51,8 @@ let foo = new FooComponent();
 foo.someMethod()    // 在"component"频道发布"foo"事件，附带的数据是{ my: "data" }
 foo.anotherMethod() // 在"/"频道发布"other"事件，不附带数据
 ```
+
+
+### Generator和yield关键字
+
+ - [yield 原理篇](http://www.html-js.com/article/Understanding-the-Yield-principle)

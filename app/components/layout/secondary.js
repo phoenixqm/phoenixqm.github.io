@@ -20,7 +20,7 @@ angular.module('blogApp').directive('blogSearch', function LayoutFooter() {
   return {
     restrict: 'EA', replace: true,
     scope: {},
-    templateUrl: 'controllers/aside/search.html',
+    templateUrl: 'components/aside/search.html',
     controller: 'SearchController'
   };
 });
@@ -31,7 +31,7 @@ angular.module('blogApp').directive('blogAvatar', function LayoutFooter() {
   return {
     restrict: 'EA', replace: true,
     scope: {},
-    templateUrl: 'controllers/aside/avatar.html'
+    templateUrl: 'components/aside/avatar.html'
 
   };
 });
@@ -41,7 +41,7 @@ angular.module('blogApp').directive('blogSocial', function LayoutFooter() {
   return {
     restrict: 'EA', replace: true,
     scope: {},
-    templateUrl: 'controllers/aside/social.html'
+    templateUrl: 'components/aside/social.html'
 
   };
 });
@@ -55,7 +55,7 @@ angular.module('blogApp').directive('blogCategories', function LayoutFooter() {
   return {
     restrict: 'EA', replace: true,
     scope: {},
-    templateUrl: 'controllers/aside/categories.html',
+    templateUrl: 'components/aside/categories.html',
     controller: 'CategoriesController'
   };
 });
@@ -64,7 +64,7 @@ angular.module('blogApp').directive('blogLicense', function LayoutFooter() {
   return {
     restrict: 'EA', replace: true,
     scope: {},
-    templateUrl: 'controllers/aside/license.html'
+    templateUrl: 'components/aside/license.html'
 
   };
 });

@@ -1,0 +1,41 @@
+
+
+
+the build of mxnet is smooth. 
+```
+sudo apt-get install -y build-essential git libatlas-base-dev libopencv-dev libgtest-dev
+
+make -j
+
+However, to use libgtest lib, you  have to build from source:
+
+cd /usr/src/gtest
+sudo cmake .
+sudo make
+sudo mv libg* /usr/lib/
+
+
+to use emcc, please read this thread:
+https://gist.github.com/gogromat/98a748bc8f447480b005
+
+Install emsdk
+
+Grab source file from here
+Extract to folder of your liking
+cd into it
+    # Fetch the latest registry of available tools.
+    ./emsdk update
+
+    # Download and install the latest SDK tools.
+    ./emsdk install latest
+
+    # Set up the compiler configuration to point to the "latest" SDK.
+    ./emsdk activate latest
+
+    # Linux/Mac OS X only: Set the current Emscripten path
+    source ./emsdk_env.sh
+
+
+try use a server easy enable cros:
+sudo npm install -g http-server
+http-server -p 3000 --cors
